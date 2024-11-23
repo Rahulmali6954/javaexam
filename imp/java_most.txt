@@ -1,0 +1,168 @@
+17) Write a java program which shows the use of Method Overloading. 
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Sum of two integers: " + calc.add(5, 10));
+        System.out.println("Sum of three integers: " + calc.add(5, 10, 15));
+        System.out.println("Sum of two doubles: " + calc.add(5.5, 10.5));
+    }
+}
+
+18) Write a java program which implements Default Constructors.
+
+class Student {
+        Student() {
+        System.out.println("Default constructor called");
+    }
+    void display() {
+        System.out.println("This is a student object.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+              Student s1 = new Student(); // Calls the default constructor
+        s1.display();
+    }
+}
+
+
+19)Write a java program which implements parameterized Constructors.
+
+class Student {
+    String name;
+    int age;
+    Student(String studentName, int studentAge) {
+        name = studentName;
+        age = studentAge;
+    }
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Rahul", 20);
+        s1.display();
+    }
+}
+
+Demo: method override  
+class Animal {
+    void sound() {
+        System.out.println("Animals make sounds.");
+    }
+}
+class Dog extends Animal {
+      void sound() {
+        System.out.println("Dogs bark.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.sound(); // Calls parent class method
+        Animal dog = new Dog();
+        dog.sound(); // Calls child class method
+    }
+}
+
+21. single  inheritance 
+class Parent {
+    void displayParentMessage() {
+        System.out.println("This is the Parent class.");
+    }
+}
+class Child extends Parent {
+    // Method in the child class
+    void displayChildMessage() {
+        System.out.println("This is the Child class.");
+    }
+}
+public class SingleInheritanceDemo {
+    public static void main(String[] args) {
+        Child childObject = new Child();
+        childObject.displayParentMessage(); // Access Parent class method
+        childObject.displayChildMessage();  // Access Child class method
+    }
+}
+
+22. Multilevel inheritance
+class Grandparent {
+    void displayGrandparentMessage() {
+        System.out.println("This is the Grandparent class.");
+    }
+}
+class Parent extends Grandparent {
+    void displayParentMessage() {
+        System.out.println("This is the Parent class.");
+    }
+}
+class Child extends Parent {
+    void displayChildMessage() {
+        System.out.println("This is the Child class.");
+    }
+}
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Child childObject = new Child();
+        childObject.displayGrandparentMessage(); // Access Grandparent class method
+        childObject.displayParentMessage();      // Access Parent class method
+        childObject.displayChildMessage();       // Access Child class method
+    }
+}
+
+23.hirachical  
+class Parent {
+        void displayParentMessage() {
+        System.out.println("This is the Parent class.");
+    }
+}
+
+class ChildOne extends Parent {
+    void displayChildOneMessage() {
+        System.out.println("This is the First Child class.");
+    }
+}
+class ChildTwo extends Parent {
+    void displayChildTwoMessage() {
+        System.out.println("This is the Second Child class.");
+    }
+}
+public class HierarchicalInheritanceDemo {
+    public static void main(String[] args) {
+        ChildOne childOneObject = new ChildOne();
+        childOneObject.displayParentMessage();
+        childOneObject.displayChildOneMessage();
+        ChildTwo childTwoObject = new ChildTwo();
+        childTwoObject.displayParentMessage();
+        childTwoObject.displayChildTwoMessage();
+    }
+}
+
+
+Try and catch  
+
+public class TryCatchExample {
+    public static void main(String[] args) {
+        try {
+                   int result = 10 / 0;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+                   System.out.println("Error: Division by zero is not allowed!");
+        }
+    }
+}
+
