@@ -1,0 +1,564 @@
+File: pr10.py
+# check the given number is palidrome or not
+
+n=int(input("enter the number"))
+
+temp=n
+
+rev=0
+
+while(n>0):
+
+	dig=n%10
+
+	rev=rev*10+dig
+
+	n=n//10
+
+if(temp==rev):
+
+	print("The given Number is palindrome")
+
+else:
+
+	print("The given Number is not palindrome")
+
+=======================================================================================
+
+File: pr11.py
+# same number print
+
+ln=[10,20,30,40,50,60,70,0,30,60,20]
+
+no=len(ln)	# we take only length not full array
+
+for i in range(0,no-1):
+
+	for j in range(i+1,no): 
+
+		if(ln[i] == ln[j]):
+
+			print(ln[j])			
+=======================================================================================
+
+File: pr12.py
+
+# write a python program to display ascending or descending order from given 10 numbers
+
+def asc_sort(arr):
+
+	n=len(arr)
+
+	for i in range(n):
+
+		for j in range(0,n-1):
+
+			if(arr[j]>arr[j+1]):
+
+				arr[j],arr[j+1]=arr[j+1],arr[j]
+
+	return arr
+
+def desc_sort(arr):
+
+	n=len(arr)
+
+	for i in range(n):
+
+		for j in range(0,n-1):
+
+			if(arr[j]<arr[j+1]):
+
+				arr[j],arr[j+1]=arr[j+1],arr[j]
+
+	return arr
+
+no=[10,20,54,41,1,96,97,87,15,21]
+
+print("Acending order sorted array:",asc_sort(no))
+
+print("Descending order sorted array:",desc_sort(no))
+=======================================================================================
+
+File: pr13.py
+# create function and use the function in the program
+
+def sum(a,b):
+
+	return(a+b)
+
+c=sum(10,20)
+
+print(c)
+=======================================================================================
+
+File: pr14.py
+# using lambda function 
+
+l1=[5,10,22,58,95,85,33,22,24,33,45,56]
+
+final_list=list(map(lambda x: x*2,l1))
+
+print(final_list)
+File: pr15.py
+from math import *
+
+print(pi)
+
+print(factorial(6))
+File: pr16.py
+# loop concept
+
+n=int(input("enter the value of rows you want"))
+
+for i in range(1, n+1):
+
+	for j in range(1, i+1):
+
+		print(j, end=" ")
+
+	print() 
+=======================================================================================
+
+File: pr17.py
+# implement the concept of list 
+
+list=[]
+
+print(list)
+
+list.append(1)
+
+list.append(2)
+
+list.append(3)
+
+list.append(4)
+
+print(list)
+
+for i in range(5,9):
+
+	list.append(i)
+
+print(list)
+=======================================================================================
+
+File: pr18.py
+# concet of tuples
+
+tuple1=("hello",2,3,4,"good","morning")
+
+print(tuple1)
+
+tuple2=("I am",5,6,"here")
+
+print(tuple2)
+
+tuple3=tuple1+tuple2
+
+print(tuple3)
+
+list=[1,2,3,4,"hello","welcome","everyone"]
+
+tuple4=tuple(list)
+
+print(tuple4)
+=======================================================================================
+
+File: pr19.py
+# nested list and display its elements
+
+list2=[["jaguar",100,97],["maruti",100,89],["hyndai",100,99],["toyota",100,99]]
+
+print(list2)
+
+for i in range(0 ,4):
+
+	print("cars",list2[i][0],"come",list2[i][1],"sell",list2[i][2])
+=======================================================================================
+
+File: pr2.py
+a=10
+
+b=20
+
+print(a)
+
+print(b)
+
+temp=a
+
+a=b
+
+b=temp
+
+print(a)
+
+print(b)
+
+=======================================================================================
+File: pr20.py
+# implement multiple inheritance basically self is object use only for access the class variabclass Father:
+
+	def height(self):
+
+		self.a=10
+
+		print("Height is 6.0 ft")
+
+class mother:
+
+	def complexion(self):
+
+		self.b=20
+
+		print("complexion is Fair")
+
+class child(Father,mother):
+
+	pass	
+
+c=child()
+
+print("Child inherited parents qualities")
+
+c.height()
+
+print("the variable of Father class",c.a)		# here we use c because a class varialbe and heightc.complexion()
+
+print("the variable of mother class",c.b)
+
+=======================================================================================
+
+File: pr21.py
+# write a python program to read a fiel bca.txt and print the contents of file along with numbfile =open("bca.txt","r")
+
+vow=["A","E","I","O","U","a","e","i","o","u"]
+
+char=["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z","B",cvow=0
+
+cchar=0
+
+for c1 in file.read():
+
+	if c1 in vow:
+
+		cvow+=1
+
+	if c1 in char:
+
+		cchar+=1
+
+print(cvow)
+
+print(cchar)
+
+file.close();
+File: pr22.py
+# write a python program for error handling 
+
+a=int(input("Enter the Value a"))
+
+b=int(input("Enter the Value b"))
+
+try:
+
+	ans=a/b
+
+except ZeroDivisionError:
+
+	print("Zero Division Error")
+
+else:
+
+	print("Answer =",ans)
+=======================================================================================
+
+File: pr3.py
+# fibonacci series
+
+num=15
+
+n1=0
+
+n2=1
+
+print("fibonacci series",n1,n2,end=" ")
+
+for i in range(2,num) :
+
+	n3 =n1+n2
+
+	n1=n2
+
+	n2=n3
+
+	print(n3,end=" ")
+=======================================================================================
+
+File: pr4.py
+# sum of two
+
+a=int(input("enter a"))
+
+b=int(input("enter b"))
+
+c=a+b
+
+print(c)
+=======================================================================================
+
+File: pr5.py
+# prime number
+
+def isPrime(n):
+
+	if(n==0 or n==1):
+
+		return (False,n)
+
+	for i in range(2,n):
+
+		if(n%i==0):
+
+			return (False,n)
+
+	return (True,n)
+
+n=int(input("enter the range"))
+
+for i in range(1,n+1):
+
+	print(isPrime(i))
+
+	print(i)
+=======================================================================================
+
+File: pr6.py
+# armstrong number 153 because 1 5 3 power of last number is 3 so 1*3 5*3 3*3 is= the number(1num=int(input("Enter the value of number:"))
+
+sum=0
+
+temp=num
+
+while temp>0:
+
+	digit=temp%10
+
+	sum+=digit**3
+
+	temp//=10
+
+if sum==num:
+
+	print("The number is armstrong") 
+
+else:
+
+	print("The number is not an armstrong")
+=======================================================================================
+
+File: pr7.py
+# create sequence of number using range datatype to display 1 to 30 with two jump
+
+for i in range(1,30,2):
+
+	print(i)
+
+File: pr8.py
+# find an are of circle 
+
+r=int(input("enter the value of radius:"))
+
+pi=3.14
+
+area=pi*r*r
+
+print("The area is=",area)
+File: pr9.py
+# find factorial series upto user entered number
+
+fact=1
+
+i=0
+
+n=int(input("Enter the number: "))
+
+for i in range(1,n+1):
+
+	fact=fact*i
+
+	print(fact)
+
+print("The factorial of given number is:",n,fact)
+File: pro22.py
+# write a python program for error handling 
+
+a=int(input("Enter the Value a"))
+
+b=int(input("Enter the Value b"))
+
+try:
+
+	ans
+
+=a/b
+
+except (TypeError,SyntaxError,ZeroDivisionError):
+
+	
+
+	print("Error")
+
+else:
+
+	print("Answer =",ans)
+File: prtest.py
+def add(x,y):
+
+	return(x+y)
+
+def sub(x,y):
+
+	return(x-y)
+=======================================================================================
+
+File: rev.py
+# reverse order loop
+
+n=int(input("enter the number"))
+
+for i in range(1,n+1):
+
+	for j in range(n,n-i,-1):
+
+		print(j,end=" ")
+
+	print()
+
+=======================================================================================
+
+File: t5.py
+from fpdf import FPDF
+
+import os
+
+# Create a PDF object
+
+pdf = FPDF()
+
+pdf.set_auto_page_break(auto=True, margin=15)
+
+# Set the folder containing your .py files
+
+folder_path = "H:/pythonkalp" # Change this to your actual folder path
+
+# Get a sorted list of Python files in the folder
+
+files = sorted([f for f in os.listdir(folder_path) if f.endswith(".py")])
+
+for filename in files:
+
+ pdf.add_page()
+
+ pdf.set_font("Courier", size=10)
+
+ pdf.cell(0, 10, f"File: {filename}", ln=True, align='C') # File name as header
+
+ pdf.ln(5) # Space before content
+
+ with open(os.path.join(folder_path, filename), "r", encoding="utf-8") as file:
+
+ for line in file:
+
+ pdf.cell(0, 5, line.strip(), ln=True)
+
+# Save the output PDF
+
+output_file = os.path.join(folder_path, "combined1_python_files.pdf")
+
+pdf.output(output_file)
+
+print(f"PDF saved as: {output_file}")
+
+File: t6.py
+from fpdf import FPDF
+
+import os
+
+# Create a PDF object
+
+pdf = FPDF()
+
+pdf.set_auto_page_break(auto=True, margin=15)
+
+# Set the folder containing your .py files
+
+folder_path = r"H:\pythonkalp" # Change this to your actual folder path
+
+# Get a sorted list of Python files in the folder (sorted by name)
+
+files = sorted([f for f in os.listdir(folder_path) if f.endswith(".py")], key=str.lower)
+
+# Ensure all files are included and processed
+
+for filename in files:
+
+ file_path = os.path.join(folder_path, filename)
+
+ if not os.path.isfile(file_path): # Skip if it's not a file
+
+ continue
+
+ pdf.add_page()
+
+ pdf.set_font("Courier", size=10)
+
+ pdf.cell(0, 10, f"File: {filename}", ln=True, align='C') # File name as header
+
+ pdf.ln(5) # Space before content
+
+ # Read file content safely with UTF-8 handling
+
+ try:
+
+ with open(file_path, "r", encoding="utf-8") as file:
+
+ for line in file:
+
+ pdf.cell(0, 5, line.encode('latin-1', 'replace').decode('latin-1'), ln=True)  except Exception as e:
+
+ pdf.cell(0, 5, f"Error reading file: {filename} - {str(e)}", ln=True)
+
+# Save the output PDF
+
+output_file = os.path.join(folder_path, "combined2_python_files.pdf")
+
+pdf.output(output_file, "F") # Ensure UTF-8 compatibility
+
+print(f"? PDF saved successfully as: {output_file}")
+=======================================================================================
+
+File: try.py
+n=int(input("enter the number"))
+
+temp=n
+
+sum=0
+
+while (n>0):
+
+	dig=n%10
+
+	sum=dig+10*sum
+
+	n=n//10
+
+if(temp==sum):
+
+	print("number is palindrome")
+
+else:
+
+	print("number is not palindrome") 
